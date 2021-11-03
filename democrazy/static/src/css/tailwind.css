@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::root {
+    --primary: #86BBD8;
+    --secondary: #F6AE2D;
+    --tertiary: #758E4F;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.btn {
+    @apply rounded text-black;
+    background-color: var(--primary);
+}

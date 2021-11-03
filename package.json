@@ -1,0 +1,36 @@
+{
+  "name": "democrazy",
+  "version": "0.1.0",
+  "description": "Democrazy: voting right",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env TAILWIND_MODE=watch NODE_ENV=development postcss ./democrazy/static/src/css/tailwind.css -o ./democrazy/static/dist/css/main.css -w",
+    "build:prod": "cross-env TAILWIND_MODE=build NODE_ENV=production postcss ./democrazy/static/src/css/tailwind.css -o ./democrazy/static/dist/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiravitPhokeed/democrazy.git"
+  },
+  "keywords": [
+    "voting",
+    "education",
+    "election"
+  ],
+  "author": "Siravit Phokeed",
+  "bugs": {
+    "url": "https://github.com/SiravitPhokeed/democrazy/issues"
+  },
+  "homepage": "https://github.com/SiravitPhokeed/democrazy#readme",
+  "devDependencies": {
+    "@tailwindcss/jit": "^0.1.18",
+    "autoprefixer": "^10.2.6",
+    "cross-env": "^7.0.3",
+    "cssnano": "^5.0.6",
+    "postcss": "^8.3.2",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.1.4"
+  },
+  "dependencies": {
+    "glob-parent": "^6.0.2"
+  }
+}

@@ -24,7 +24,7 @@ def create_app(test_config=None):
         pass
 
     # Import views
-    from . import landing
-    app.register_blueprint(landing.bp)
+    from . import routes
+    app.register_blueprint(routes.bp)
 
     return app

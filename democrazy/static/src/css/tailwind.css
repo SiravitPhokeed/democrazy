@@ -6,14 +6,30 @@
     --primary: #86BBD8;
     --secondary: #F6AE2D;
     --tertiary: #758E4F;
+    --primary-accent: #;
 }
 
+/* Reset */
 body {
     font-family: "Inter", sans-serif;
 }
 
+/* Utilities */
+.h-120 {
+    height: 30rem;
+}
+
+.h-128 {
+    height: 32rem;
+}
+
+.min-h-content {
+    min-height: calc(100vh - 7.5rem);
+}
+
+/* Components */
 .btn {
-    @apply inline-block rounded px-4 py-2 text-black focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-block rounded-lg px-4 py-2 text-black focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
 .btn-primary {

@@ -25,11 +25,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function changeTo(slideNumber) {
-        // console.log(slideNumber)
         if (slideNumber === 0) {
+            // Change header
+            let header = document.querySelector("#header");
+            header.innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">Our elections are broken.</h1><h2 class="text-4xl xl:text-5xl font-black">Let’s fix that.</h2>';
+            header.style.textAlign = null;
+
             // Change buttons
-            document.querySelector("#header").innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">Our elections are broken.</h1><h2 class="text-4xl xl:text-5xl font-black">Let’s fix that.</h2>';
-            document.querySelector("#btns-container").innerHTML = '<button class="btn btn-secondary text-lg xl:text-xl" id="next-btn" autofocus>See why</button><a class="btn btn-primary text-lg xl:text-xl" href="/explore">See how</a>';
+            let btnsContainer = document.querySelector("#btns-container");
+            btnsContainer.innerHTML = '<button class="btn btn-secondary text-lg xl:text-xl" id="next-btn" autofocus>See why</button><a class="btn btn-primary text-lg xl:text-xl" href="/explore">See how</a>';
+            btnsContainer.style.justifyContent = "flex-start";
 
             // Set event listeners for the new buttons
             document.querySelector("#next-btn").addEventListener("click", next);
@@ -55,14 +60,18 @@ document.addEventListener("DOMContentLoaded", () => {
             barB1.style.opacity = null;
 
         } else if (slideNumber === 1) {
+            let header = document.querySelector("#header")
+
             // Change buttons
-            document.querySelector("#header").innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">The current system and the spoiler effect</h1>'
-            let newBtns = '<button class="btn btn-primary text-lg xl:text-xl" id="back-btn" autofocus="">Back</button>\
+            header.innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">The current system and the spoiler effect</h1>'
+            let newBtns = '<button class="btn btn-primary text-lg xl:text-xl" id="back-btn">Back</button>\
             <button class="btn btn-secondary text-lg xl:text-xl" id="next-btn">Next</button>'
             let btnsContainer = document.querySelector("#btns-container");
             if (btnsContainer.innerHTML !== newBtns) {
                 console.log(btnsContainer.innerHTML)
+                header.style.textAlign = "right";
                 btnsContainer.innerHTML = newBtns;
+                btnsContainer.style.justifyContent = "flex-end";
             }
             
             // Set event listeners for the new buttons
@@ -107,6 +116,10 @@ document.addEventListener("DOMContentLoaded", () => {
             text.style.paddingLeft = null;
             
             // Animate bars
+            barA.style.height = null;
+            barB.style.height = "32rem";
+            barBTop.style.height = "0";
+            barBTop.style.opacity = "0";
             barB1.style.height = null;
             barB1.style.opacity = null;
             barB1.classList.add("from-tertiary-light");
@@ -117,6 +130,24 @@ document.addEventListener("DOMContentLoaded", () => {
                 barB1.style.textAlign = "center";
             }, 200);
 
+        } else if (slideNumber === 3) {
+            // Change paragraph
+            text.innerHTML = "<p>Since party B1 is formed by former party B supporters, <strong>party B loses its voters to party B1\
+                </strong>. The votes split.</p><p>The current system means <strong>party A wins</strong>, despite the fact that there \
+                are more people that do not support party A.</p><p>Seeing this, you <strong>will never vote for a new party again, \
+                because you don’t want party A to win</strong>, despite how much you might like the new one.</p>";
+            
+            // Animate bars
+            barB.style.height = null;
+            barBTop.style.height = null;
+            barBTop.style.opacity = null;
+            barB1.style.opacity = "0";
+            setTimeout(() => {
+                barB1.classList.add("from-tertiary");
+                barB1.classList.remove("from-tertiary-light");
+                barB1.style.opacity = null;
+            }, 500);
+        
         } else {
             // Change paragraph
             text.innerHTML = `<p>…how are you here?</p><sample>slideNumber = ${slideNumber}</sample>`

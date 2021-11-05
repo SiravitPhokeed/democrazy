@@ -6,7 +6,7 @@
     --primary: #86BBD8;
     --secondary: #F6AE2D;
     --tertiary: #758E4F;
-    --primary-accent: #;
+    --primary-accent: #33658A;
 }
 
 /* Reset */
@@ -29,7 +29,7 @@ body {
 
 /* Components */
 .btn {
-    @apply inline-block rounded-lg px-4 py-2 text-black focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
 .btn-primary {
@@ -38,4 +38,8 @@ body {
 
 .btn-secondary {
     @apply bg-secondary;
+}
+
+.link {
+    @apply block text-primary-accent font-bold underline rounded-lg cursor-pointer transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }

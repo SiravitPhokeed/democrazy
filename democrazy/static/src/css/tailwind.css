@@ -15,6 +15,12 @@ body {
 }
 
 /* Utilities */
+.transition-slow-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+
 .h-120 {
     height: 30rem;
 }
@@ -41,5 +47,13 @@ body {
 }
 
 .link {
-    @apply block text-primary-accent font-bold underline rounded-lg cursor-pointer transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply block text-primary-accent font-bold underline rounded-lg cursor-pointer transition-shadow hover:ring hover:ring-blue-200
+        focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+}
+
+.bar {
+    @apply block w-56 text-2xl bg-gradient-to-b rounded-t-3xl;
+    transition-property: height, opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
 }

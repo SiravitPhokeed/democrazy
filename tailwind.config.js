@@ -1,7 +1,7 @@
 module.exports = {
   mode: 'jit',
   purge: {
-    content: ['./democrazy/templates/**/*.html', './src/**/*.js']
+    content: ['./democrazy/templates/**/*.html', './democrazy/static/src/**/*.js']
   },
   darkMode: false, // or 'media' or 'class'
   theme: {

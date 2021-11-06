@@ -1,22 +1,22 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
   mode: 'jit',
-  purge: ['./democrazy/templates/**/*.html'],
+  purge: {
+    content: ['./democrazy/templates/**/*.html', './src/**/*.js']
+  },
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        "primary": {
-          "accent": "#33658A",
-          DEFAULT: "#86BBD8"
+        'primary': {
+          'accent': '#33658A',
+          DEFAULT: '#86BBD8'
         },
-        "secondary": {
-          DEFAULT: "#F6AE2D"
+        'secondary': {
+          DEFAULT: '#F6AE2D'
         },
-        "tertiary": {
-          DEFAULT: "#758E4F",
-          light: "#E3E8DB"
+        'tertiary': {
+          DEFAULT: '#758E4F',
+          light: '#E3E8DB'
         }
       }
     }
@@ -26,7 +26,3 @@ module.exports = {
   },
     plugins: [],
 }
-
-// --primary: #86BBD8;
-// --secondary: #F6AE2D;
-// --tertiary: #758E4F;

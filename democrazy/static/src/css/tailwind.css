@@ -41,7 +41,8 @@ body {
 
 /* Components */
 .btn {
-    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow hover:ring hover:ring-blue-200 focus:outline-none
+        focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
 .btn-primary {

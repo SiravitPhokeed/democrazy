@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Change buttons
                 header.innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">The current system and the spoiler effect</h1>'
-                let newBtns = '<button class="btn btn-primary text-lg xl:text-xl" id="back-btn">Back</button>\
-            <button class="btn btn-secondary text-lg xl:text-xl" id="next-btn">Next</button>'
+                let newBtns = '<button class="btn btn-primary text-xl xl:text-2xl" id="back-btn">Back</button>\
+            <button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn">Next</button>'
                 let btnsContainer = document.querySelector("#btns-container");
                 if (btnsContainer.innerHTML !== newBtns) {
                     header.style.textAlign = "right";

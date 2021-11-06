@@ -20,7 +20,7 @@
                 <button class="btn btn-secondary text-lg xl:text-xl" id="next-btn" autofocus>See why</button>
                 <a class="btn btn-primary text-lg xl:text-xl" href="/explore">See how</a>
             </div>
-            <div class="flex flex-col gap-2 pl-32 text-lg xl:text-xl" id="text">
+            <div class="flex flex-col gap-2 pl-32 text-lg xl:text-xl transition-slow-float" id="text" style="transform: translateX(0);">
                 <p>
                     Have you ever felt like nothing ever happens anymore in your government?
                 </p>
@@ -38,7 +38,10 @@
         <div class="flex flex-col">
             <div class="bar h-36 from-tertiary-light" id="bar-b-top"></div>
             <div class="bar h-96 from-secondary" id="bar-b"></div>
+            <div class="block absolute w-56 h-36 rounded-3xl bg-transparent transition-slow-all" id="bar-b-border"
+                style="top: 1rem; left: 21rem;"></div>
         </div>
         <div class="bar h-36 from-tertiary" id="bar-b1"></div>
+        <div class="bar h-0 from-primary-accent" id="bar-d"></div>
     </div>
 {% endblock %}

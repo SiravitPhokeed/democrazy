@@ -29,4 +29,4 @@ jobs:
         python -m unittest
     - name: Lint with ESLint
       run: |
-        ./node_modules/.bin/eslint yourfile.js
+        ./node_modules/.bin/eslint

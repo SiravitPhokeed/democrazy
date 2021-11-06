@@ -46,15 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Change buttons
                 let btnsContainer = document.querySelector("#btns-container");
-                btnsContainer.innerHTML = '<button class="btn btn-secondary text-lg xl:text-xl" id="next-btn" autofocus>See why</button>\
-                <a class="btn btn-primary text-lg xl:text-xl" href="/explore">See how</a>';
+                btnsContainer.innerHTML = '<button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn" autofocus>See why\
+                    </button><a class="btn btn-primary text-xl xl:text-2xl" href="/explore">See how</a>';
                 btnsContainer.style.justifyContent = "flex-start";
 
                 // Set event listeners for the new buttons
                 document.querySelector("#next-btn").addEventListener("click", next);
 
                 // Change paragraph
-                text.innerHTML = '<p>Have you ever felt like nothing ever happens anymore in your government?</p><p>It might be because the way we vote for people is systematically flawed.</p><div class="flex flex-row items-center"><span class="link" tabindex="0">How?</span></div>';
+                text.innerHTML = '<p>Have you ever felt like nothing ever happens anymore in your government?</p><p>\
+                    It might be because the way we vote for people is systematically flawed.</p><div class="flex flex-row items-center"\
+                    ><span class="link" tabindex="0">How?</span></div>';
                 text.style.paddingLeft = null;
 
                 // Reset bars
@@ -198,6 +200,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 barB.style.height = "32rem";
                 barBTop.style.height = "0";
                 barBTop.style.opacity = "0";
+                barBBorder.style.top = null;
+                barBBorder.style.left = null;
                 barB1.style.height = "8rem";
                 barD.style.height = "6rem";
 
@@ -218,8 +222,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Change buttons
                 let btnsContainer = document.querySelector("#btns-container");
-                btnsContainer.innerHTML = '<button class="btn btn-secondary text-lg xl:text-xl" id="reset-btn" autofocus>Play again\
-                    </button><a class="btn btn-primary text-lg xl:text-xl" href="/explore">Explore</a>';
+                btnsContainer.innerHTML = '<button class="btn btn-secondary text-xl xl:text-2xl" id="reset-btn" autofocus>Play again\
+                    </button><a class="btn btn-primary text-xl xl:text-2xl" href="/explore">Explore</a>';
                 btnsContainer.style.justifyContent = "flex-start";
 
                 // Set event listeners for the new buttons

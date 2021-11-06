@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Change paragraph
                 text.innerHTML = '<p>Have you ever felt like nothing ever happens anymore in your government?</p><p>\
-                    It might be because the way we vote for people is systematically flawed.</p><div class="flex flex-row items-center"\
-                    ><span class="link" tabindex="0">How?</span></div>';
+                    It might be because the way we vote for people is systematically flawed.</p><div class="flex flex-row \
+                    items-center"><span class="link" tabindex="0">How?</span></div>';
                 text.style.paddingLeft = null;
 
                 // Reset bars
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 // Change buttons
                 header.innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">The current system and the spoiler effect</h1>'
                 let newBtns = '<button class="btn btn-primary text-xl xl:text-2xl" id="back-btn">Back</button>\
-            <button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn">Next</button>'
+            <button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn">Next</button>';
                 let btnsContainer = document.querySelector("#btns-container");
                 if (btnsContainer.innerHTML !== newBtns) {
                     header.style.textAlign = "right";
@@ -94,10 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector("#back-btn").addEventListener("click", back);
 
                 // Change paragraph
-                text.innerHTML = '<p><strong>This might get complicated, so please read carefully.</strong> Thanks!</p><hr><p>Let’s say \
-                    we hold an election, wherein the party with the <strong>most votes win</strong>. That’s called “First Past The \
-                    Post” (FPTP). </p><p>As a voter, you really like party B and just absolutely hate party A. You always vote for \
-                    party B</p><p>By this system, <strong>party B is the winning party</strong>, to your delight.</p>';
+                text.innerHTML = '<p><strong>This might get complicated, so please read carefully.</strong> Thanks!</p><hr><p>Let’s \
+                    say we hold an election, wherein the party with the <strong>most votes win</strong>. That’s called “First Past \
+                    The Post” (FPTP). </p><p>As a voter, you really like party B and just absolutely hate party A. You always vote \
+                    for party B</p><p>By this system, <strong>party B is the winning party</strong>, to your delight.</p>';
                 text.style.paddingLeft = "0";
 
                 // Animate bars
@@ -170,6 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 barBBorder.style.top = "24rem";
                 barBBorder.style.left = "36rem";
                 barD.style.height = null;
+                barD.style.opacity = "0";
                 barD.innerHTML = "";
                 barD.style.padding = null;
                 barD.style.textAlign = null;
@@ -204,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 barBBorder.style.left = null;
                 barB1.style.height = "8rem";
                 barD.style.height = "6rem";
+                barD.style.opacity = null;
 
                 // Change text
                 barB1.innerHTML = "C";
@@ -235,6 +237,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     systems</a></div>';
                 text.style.paddingLeft = null;
 
+                // Animate bars
+                barD.style.opacity = "0";
+
                 // Reset bars
                 barA.style.height = null;
                 barB.style.height = null;
@@ -243,7 +248,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 barB1.style.height = null;
                 barB1.style.opacity = null;
                 barD.style.height = null;
-                barD.style.opacity = null;
 
                 // Reset bar texts
                 barA.innerHTML = "";

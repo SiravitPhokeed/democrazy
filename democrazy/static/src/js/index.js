@@ -43,21 +43,39 @@ document.addEventListener("DOMContentLoaded", () => {
             if (slideNumber === 0) {
                 // Change header
                 let header = document.querySelector("#header");
-                header.innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">Our elections are broken.</h1><h2 class="text-4xl \
-                xl:text-5xl font-black">Let’s fix that.</h2>';
+                header.innerHTML = `
+                    <h1 class="text-4xl xl:text-5xl font-black">Our elections are broken.</h1>
+                    <h2 class="text-4xl xl:text-5xl font-black">Let’s fix that.</h2>
+                `;
                 header.style.textAlign = null;
 
                 // Change buttons
                 let btnsContainer = document.querySelector("#btns-container");
-                btnsContainer.innerHTML = '<button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn" autofocus>See why\
-                    </button><a class="btn btn-primary text-xl xl:text-2xl" href="/explore">See how</a>';
+                btnsContainer.innerHTML = `
+                    <button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn" autofocus>
+                        See why
+                    </button>
+                    <a class="btn btn-primary text-xl xl:text-2xl" href="/explore">
+                        See how
+                    </a>
+                `;
                 btnsContainer.style.justifyContent = "flex-start";
 
                 // Change paragraph
-                text.innerHTML = '<p>Have you ever felt like nothing ever happens anymore in your government?</p><p>\
-                    It might be because the way we vote for people is systematically flawed.</p><div class="flex flex-row \
-                    items-center"><button class="link" id="next-link"><span class="link-text">How?</span><span \
-                    class="material-icons text-2xl xl:text-3xl">launch</span></button>';
+                text.innerHTML = `
+                    <p>
+                        Have you ever felt like nothing ever happens anymore in your government?
+                    </p>
+                    <p>
+                        It might be because the way we vote for people is systematically flawed.
+                    </p>
+                    <p>
+                        <button class="link" id="next-link">
+                            <span class="link-text">How?</span>
+                            <span class="material-icons text-2xl xl:text-3xl">launch</span>
+                        </button>
+                    </p>
+                `;
                 text.style.paddingLeft = null;
 
                 // Set event listeners for the new buttons
@@ -84,9 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 let header = document.querySelector("#header")
 
                 // Change buttons
-                header.innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">The current system and the spoiler effect</h1>'
-                let newBtns = '<button class="btn btn-primary text-xl xl:text-2xl" id="back-btn">Back</button>\
-            <button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn">Next</button>';
+                header.innerHTML = `
+                    <h1 class="text-4xl xl:text-5xl font-black">The current system and the spoiler effect</h1>
+                `;
+                let newBtns = `
+                    <button class="btn btn-primary text-xl xl:text-2xl" id="back-btn">Back</button>
+                    <button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn">Next</button>
+                `;
                 let btnsContainer = document.querySelector("#btns-container");
                 if (btnsContainer.innerHTML !== newBtns) {
                     header.style.textAlign = "right";
@@ -99,10 +121,22 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.querySelector("#back-btn").addEventListener("click", back);
 
                 // Change paragraph
-                text.innerHTML = '<p><strong>This might get complicated, so please read carefully.</strong> Thanks!</p><hr><p>Let’s \
-                    say we hold an election, wherein the party with the <strong>most votes win</strong>. That’s called “First Past \
-                    The Post” (FPTP). </p><p>As a voter, you really like party B and just absolutely hate party A. You always vote \
-                    for party B</p><p>By this system, <strong>party B is the winning party</strong>, to your delight.</p>';
+                text.innerHTML = `
+                    <p>
+                        <strong>This might get complicated, so please read carefully.</strong> Thanks!
+                    </p><hr>
+                    <p>
+                        Let’s say we hold an election, wherein the party with the <strong>most votes win</strong>. That’s called
+                        “First Past The Post” (FPTP).
+                    </p>
+                    <p>
+                        As a voter, you really like party B and just absolutely hate party A.
+                        You always vote for party B
+                    </p>
+                    <p>
+                        By this system, <strong>party B is the winning party</strong>, to your delight.
+                    </p>
+                `;
                 text.style.paddingLeft = "0";
 
                 // Animate bars
@@ -134,10 +168,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
             } else if (slideNumber === 2) {
                 // Change paragraph
-                text.innerHTML = "<p>Now consider this scenario: a part of party B decided to split out and form their own party: party \
-                    B1.</p><p>You discovered that <strong>you like party B1 way more than party B, as with a lot of other party B \
-                    voters. </strong></p><p>You decided, along with some former party B voters, to <strong>vote for party B1</strong> \
-                    instead.</p>";
+                text.innerHTML = `
+                    <p>
+                        Now consider this scenario: a part of party B decided to split out and form their own party: party B1.
+                    </p>
+                    <p>
+                        You discovered that <strong>you like party B1 way more than party B, as with a lot of other party B voters.
+                        </strong>
+                    </p>
+                    <p>
+                        You decided, along with some former party B voters, to <strong>vote for party B1</strong> instead.
+                    </p>
+                `;
                 text.style.paddingLeft = null;
 
                 // Animate bars
@@ -162,10 +204,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
             } else if (slideNumber === 3) {
                 // Change paragraph
-                text.innerHTML = "<p>Since party B1 is formed by former party B supporters, <strong>party B loses its voters to party B1\
-                    </strong>. The votes split.</p><p>The current system means <strong>party A wins</strong>, despite the fact that \
-                    there are more people that do not support party A.</p><p>Seeing this, you <strong>will never vote for a new party \
-                    again, because you don’t want party A to win</strong>, despite how much you might like the new one.</p>";
+                text.innerHTML = `
+                    <p>
+                        Since party B1 is formed by former party B supporters, <strong>party B loses its voters to party B1</strong>.
+                        The votes split.
+                    </p>
+                    <p>
+                        The current system means <strong>party A wins</strong>, despite the fact that there are more people that do not
+                        support party A.
+                    </p>
+                    <p>
+                        Seeing this, you <strong>will never vote for a new party again, because you don’t want party A to win</strong>,
+                        despite how much you might like the new one.
+                    </p>
+                `;
 
                 // Animate bars
                 barB.style.height = null;
@@ -196,10 +248,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
             } else if (slideNumber === 4) {
                 // Change paragraph
-                text.innerHTML = "<p>Because a new party like party B1 could never win under this system, <strong>only the 2 big \
-                    parties are taken seriously in real life</strong>, and only they can actually do things.</p><p>That’s why changes \
-                    and new ideas never happen; <strong>only the long-established parties are heard but not the new parties with new \
-                    ideas</strong>.</p>";
+                text.innerHTML = `
+                    <p>
+                        Because a new party like party B1 could never win under this system, <strong>only the 2 big parties are taken
+                        seriously in real life</strong>, and only they can actually do things.
+                    </p>
+                    <p>
+                        That’s why changes and new ideas never happen; <strong>only the long-established parties are heard but not the new
+                        parties with new ideas</strong>.
+                    </p>
+                `;
 
                 // Animate bars
                 barA.style.height = "28rem";
@@ -223,23 +281,37 @@ document.addEventListener("DOMContentLoaded", () => {
             } else if (slideNumber === 5) {
                 // Change header
                 let header = document.querySelector("#header");
-                header.innerHTML = '<h1 class="text-4xl xl:text-5xl font-black">Our elections are broken.</h1><h2 class="text-4xl \
-                    xl:text-5xl font-black">Let’s fix that.</h2>';
+                header.innerHTML = `
+                    <h1 class="text-4xl xl:text-5xl font-black">
+                        Our elections are broken.
+                    </h1>
+                    <h2 class="text-4xl xl:text-5xl font-black">
+                        Let’s fix that.
+                    </h2>
+                `;
                 header.style.textAlign = null;
 
                 // Change buttons
                 let btnsContainer = document.querySelector("#btns-container");
-                btnsContainer.innerHTML = '<button class="btn btn-secondary text-xl xl:text-2xl" id="reset-btn" autofocus>Play again\
-                    </button><a class="btn btn-primary text-xl xl:text-2xl" href="/explore">Explore</a>';
+                btnsContainer.innerHTML = `<button class="btn btn-secondary text-xl xl:text-2xl" id="reset-btn" autofocus>Play again\
+                    </button><a class="btn btn-primary text-xl xl:text-2xl" href="/explore">Explore</a>`;
                 btnsContainer.style.justifyContent = "flex-start";
 
                 // Set event listeners for the new buttons
                 document.querySelector("#reset-btn").addEventListener("click", reset);
 
                 // Change paragraph
-                text.innerHTML = '<p>But do not lose hope! There are other voting systems that attempt to solve issues like this one.\
-                    </p><div class="flex flex-row items-center"><a href="/explore" class="link" tabindex="0">Explore other voting \
-                    systems</a></div>';
+                text.innerHTML = `
+                    <p>
+                        But do not lose hope! There are other voting systems that attempt to solve issues like this one.
+                    </p>
+                    <p>
+                        <a class="link" href="/explore">
+                            <span class="link-text">Explore other voting systems</span>
+                            <span class="material-icons text-2xl xl:text-3xl">launch</span>
+                        </a>
+                    </p>
+                `;
                 text.style.paddingLeft = null;
 
                 // Animate bars

@@ -58,7 +58,7 @@ body {
         focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
-.link > a {
+.link > .link-text {
     @apply underline;
 }
 

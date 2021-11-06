@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let text = document.querySelector("#text");
 
     nextBtn.addEventListener("click", next);
+    document.querySelector("#next-link").addEventListener("click", next);
 
     function back() {
         slideNumber--;
@@ -30,6 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function changeTo(slideNumber) {
+        console.log(slideNumber)
+
         text.style.opacity = "0";
         text.style.transform = "translateX(2rem)";
 
@@ -50,14 +53,16 @@ document.addEventListener("DOMContentLoaded", () => {
                     </button><a class="btn btn-primary text-xl xl:text-2xl" href="/explore">See how</a>';
                 btnsContainer.style.justifyContent = "flex-start";
 
-                // Set event listeners for the new buttons
-                document.querySelector("#next-btn").addEventListener("click", next);
-
                 // Change paragraph
                 text.innerHTML = '<p>Have you ever felt like nothing ever happens anymore in your government?</p><p>\
                     It might be because the way we vote for people is systematically flawed.</p><div class="flex flex-row \
-                    items-center"><span class="link" tabindex="0">How?</span></div>';
+                    items-center"><button class="link" id="next-link"><span class="link-text">How?</span><span \
+                    class="material-icons text-2xl xl:text-3xl">launch</span></button>';
                 text.style.paddingLeft = null;
+
+                // Set event listeners for the new buttons
+                document.querySelector("#next-btn").addEventListener("click", next);
+                document.querySelector("#next-link").addEventListener("click", next);
 
                 // Reset bars
                 barA.style.height = null;

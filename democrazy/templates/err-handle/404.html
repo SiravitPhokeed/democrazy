@@ -1,23 +1,25 @@
 {% extends "layout.html" %}
 
 {% block title %}
-    Uh-oh!
+    Not Found!
 {% endblock %}
 
 {% block main %}
-    <header class="text-3xl">
-        <h1>
-            Oh no, not found!
-        </h1>
-    </header>
-    <main class="text-xl">
-        <p>
-            First-past-the-post was a mistake, but do you know what’s also a mistake. The URL up there!
-        </p>
-        <p>
-            If you typed the URL manually, please check your spelling. If something brought you here, click
-            <span class="link" onclick="window.history.back();"><span class="link-text">here</span><span class="material-icons text-2xl">
-            launch</span></span> to go back.
-        </p>
-    </main>
+    <div class="flex flex-col items-center gap-3 min-h-content text-center p-9">
+        <header class="text-3xl font-bold">
+            <h1>
+                Oh no, not found!
+            </h1>
+        </header>
+        <main class="text-xl w-[56ch] max-w-screen">
+            <p>
+                First-past-the-post was a mistake, but do you know what’s also a mistake? The URL up there!
+            </p>
+            <p>
+                If you typed the URL manually, please check your spelling. If something brought you here, click
+                <span class="link" onclick="window.history.back();"><span class="link-text">here</span><span class="material-icons
+                text-2xl"> launch</span></span> to go back.
+            </p>
+        </main>
+    </div>
 {% endblock %}

@@ -1,5 +1,8 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
+
+def page_not_found(e):
+    return render_template("err-handle/404.html"), 404
 
 def create_app(test_config=None):
     # Create and configure the app
@@ -16,6 +19,9 @@ def create_app(test_config=None):
     else:
         # Load the test config if passed in
         app.config.from_mapping(test_config)
+    
+    # Error handling
+    app.register_error_handler(404, page_not_found)
 
     # Ensure the instance folder exists
     try:

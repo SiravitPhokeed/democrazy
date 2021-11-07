@@ -15,28 +15,25 @@ body {
 }
 
 /* Utilities */
-.transition-slow-float {
-    transition-property: opacity, transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-}
+@layer utilities {
+    .transition-slow {
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+    }
 
-.transition-slow-all {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-}
+    .transition-slow-float {
+        @apply transition-slow;
+        transition-property: opacity, transform;
+    }
 
-.h-120 {
-    height: 30rem;
-}
+    .transition-slow-all {
+        @apply transition-slow;
+        transition-property: all;
+    }
 
-.h-128 {
-    height: 32rem;
-}
-
-.min-h-content {
-    min-height: calc(100vh - 7.5rem);
+    .min-h-content {
+        min-height: calc(100vh - 7.5rem);
+    }
 }
 
 /* Components */
@@ -70,5 +67,9 @@ body {
 }
 
 .card {
-    @apply flex flex-row gap-1 p-3 rounded-lg bg-primary-light;
+    @apply p-3 rounded-lg bg-primary-light;
+}
+
+.card-explore {
+    @apply flex flex-row gap-1;
 }

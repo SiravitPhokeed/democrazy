@@ -12,16 +12,24 @@
 </head>
 
 <body>
-    <nav class="fixed flex flex-row flex-wrap justify-between gap-6 w-screen px-12 py-3 text-xl rounded-b-xl bg-white bg-opacity-50
-        backdrop-filter backdrop-blur shadow-xl z-40">
+    <nav class="fixed flex flex-row flex-wrap justify-between items-center gap-6 w-screen px-12 py-2 text-xl rounded-b-xl bg-white
+        bg-opacity-50 backdrop-filter backdrop-blur shadow-xl z-40">
         <div>
             Democrazy
         </div>
-        <ul class="flex flex-row flex-wrap gap-6 list-none">
-            <li><a href="/">Home</a></li>
-            <li><a href="/explore">Explore</a></li>
+        <ul class="flex flex-row flex-wrap gap-2 list-none px-9">
+            <li class="{{ 'bg-gray-200' if page == 'home' }} px-4 py-2 rounded-lg">
+                <a href="/">Home</a>
+            </li>
+            <li class="{{ 'bg-gray-200' if page == 'explore' }} px-4 py-2 rounded-lg">
+                <a href="/explore">Explore</a>
+            </li>
+            <li class="{{ 'bg-gray-200' if page == 'polls' }} px-4 py-2 rounded-lg">
+                <a href="/polls">My Polls</a>
+            </li>
         </ul>
     </nav>
+    <div>
     <main class="transform translate-y-12 p-9">
         {% block main %}{% endblock %}
     </main>

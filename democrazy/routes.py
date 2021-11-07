@@ -9,3 +9,7 @@ def index():
 @bp.route("/explore")
 def explore():
     return render_template("explore.html")
+
+@bp.route("/polls")
+def polls():
+    return render_template("polls.html")

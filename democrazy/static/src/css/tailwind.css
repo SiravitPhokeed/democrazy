@@ -38,7 +38,7 @@ body {
 
 /* Components */
 .btn {
-    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow hover:ring hover:ring-blue-200 focus:outline-none
+    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow shadow-lg hover:ring hover:ring-blue-200 focus:outline-none
         focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
@@ -51,8 +51,8 @@ body {
 }
 
 .link {
-    @apply inline-flex items-center gap-1 text-primary-dark font-bold rounded-lg cursor-pointer transition-shadow hover:ring hover:ring-blue-200
-        focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-flex items-center gap-1 text-primary-dark font-bold rounded-lg cursor-pointer transition-shadow hover:ring
+        hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
 .link > .link-text {
@@ -67,9 +67,9 @@ body {
 }
 
 .card {
-    @apply p-3 rounded-lg bg-primary-light;
+    @apply rounded-lg bg-primary-light shadow-lg;
 }
 
 .card-explore {
-    @apply flex flex-row gap-1;
+    @apply grid grid-cols-explore;
 }

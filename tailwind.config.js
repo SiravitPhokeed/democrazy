@@ -24,6 +24,9 @@ module.exports = {
           light: '#E3E8DB'
         }
       },
+      gridTemplateColumns: {
+        'explore': '8rem auto'
+      },
       keyframes: {
         'fade-in': {
           '0%': { opacity: '0' },

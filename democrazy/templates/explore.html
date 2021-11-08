@@ -18,16 +18,76 @@
         <section class="flex flex-col gap-3 lg:px-32">
             <h2 class="font-bold text-2xl xl:text-3xl">Plurality system</h2>
             <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <li class="card card-explore">Lorem</li>
-                <li class="card card-explore">Ipsum</li>
-                <li class="card card-explore">Dolor</li>
-                <li class="card card-explore">Sit</li>
+                <li class="card card-explore">
+                    <div class="flex flex-row justify-center items-end px-3">
+                        <img src="{{ url_for('static', filename='pictures/explore/first-past-the-post.png') }}">
+                    </div>
+                    <div class="py-3 break-words">
+                        <h3 class="font-bold text-xl">
+                            First-past-the-post
+                        </h3>
+                        <p>
+                            The highest polling candidate is elected
+                        </p>
+                    </div>
+                </li>
+                <li class="card card-explore">
+                    <div class="grid place-items-center p-3">
+                        <img src="{{ url_for('static', filename='pictures/explore/limited-voting.png') }}">
+                    </div>
+                    <div class="py-3 break-words">
+                        <h3 class="font-bold text-xl">
+                            Limited Voting
+                        </h3>
+                        <p>
+                            Vote for more than one candidate, but less than the positions available
+                        </p>
+                    </div>
+                </li>
+                <li class="card card-explore">
+                    <div class="grid place-items-center p-3">
+                        <img src="{{ url_for('static', filename='pictures/explore/block-voting.png') }}">
+                    </div>
+                    <div class="py-3 break-words">
+                        <h3 class="font-bold text-xl">
+                            Block Voting
+                        </h3>
+                        <p>
+                            Vote for as many positions are available
+                        </p>
+                    </div>
+                </li>
+                <li class="card card-explore">
+                    <div class="grid place-items-center p-3">
+                        <img src="{{ url_for('static', filename='pictures/explore/party-block-voting.png') }}">
+                    </div>
+                    <div class="py-3 break-words">
+                        <h3 class="font-bold text-xl">
+                            Party Block Voting
+                        </h3>
+                        <p>
+                            Vote for as many positions are available; but voters vote for parties, not candidates
+                        </p>
+                    </div>
+                </li>
             </ul>
         </section>
         <section class="flex flex-col gap-3 lg:px-32">
             <h2 class="font-bold text-2xl xl:text-3xl">Ranked/Preferential system</h2>
             <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
-                <li class="card card-explore">Dolor</li>
+                <li class="card card-explore">
+                    <div class="grid place-items-center p-3">
+                        <img src="{{ url_for('static', filename='pictures/explore/alternative-voting.png') }}">
+                    </div>
+                    <div class="py-3 break-words">
+                        <h3 class="font-bold text-xl">
+                            Alternative Voting
+                        </h3>
+                        <p>
+                            Voters rank candidates; runoffs happen in calculation
+                        </p>
+                    </div>
+                </li>
                 <li class="card card-explore">Sit</li>
             </ul>
         </section>

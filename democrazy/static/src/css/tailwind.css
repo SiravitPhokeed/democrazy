@@ -50,6 +50,10 @@ body {
     @apply bg-secondary;
 }
 
+.clickable {
+    @apply transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+}
+
 .link {
     @apply inline-flex items-center gap-1 text-primary-dark font-bold rounded-lg cursor-pointer transition-shadow hover:ring
         hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
@@ -71,5 +75,5 @@ body {
 }
 
 .card-explore {
-    @apply grid grid-cols-explore;
+    @apply grid grid-cols-explore h-full;
 }

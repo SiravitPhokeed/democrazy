@@ -51,7 +51,7 @@ body {
 }
 
 .link {
-    @apply inline-flex items-center gap-1 text-primary-accent font-bold rounded-lg cursor-pointer transition-shadow hover:ring hover:ring-blue-200
+    @apply inline-flex items-center gap-1 text-primary-dark font-bold rounded-lg cursor-pointer transition-shadow hover:ring hover:ring-blue-200
         focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 

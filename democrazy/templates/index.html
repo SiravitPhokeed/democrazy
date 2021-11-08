@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% set page = "home" %}
 
 {% block title %}
     Welcome
@@ -37,7 +38,7 @@
         </div>
     </div>
     <div class="flex flex-row items-end gap-4 absolute bottom-0 left-0 px-24">
-        <div class="bar h-120 from-primary" id="bar-a"></div>
+        <div class="bar h-[30rem] from-primary" id="bar-a"></div>
         <div class="flex flex-col">
             <div class="bar h-36 from-tertiary-light" id="bar-b-top"></div>
             <div class="bar h-96 from-secondary" id="bar-b"></div>
@@ -45,6 +46,6 @@
                 style="top: 1rem; left: 21rem;"></div>
         </div>
         <div class="bar h-36 from-tertiary" id="bar-b1"></div>
-        <div class="bar h-0 from-primary-accent" id="bar-d"></div>
+        <div class="bar h-0 from-primary-dark" id="bar-d"></div>
     </div>
 {% endblock %}

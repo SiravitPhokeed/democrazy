@@ -15,33 +15,30 @@ body {
 }
 
 /* Utilities */
-.transition-slow-float {
-    transition-property: opacity, transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-}
+@layer utilities {
+    .transition-slow {
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+    }
 
-.transition-slow-all {
-    transition-property: all;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 500ms;
-}
+    .transition-slow-float {
+        @apply transition-slow;
+        transition-property: opacity, transform;
+    }
 
-.h-120 {
-    height: 30rem;
-}
+    .transition-slow-all {
+        @apply transition-slow;
+        transition-property: all;
+    }
 
-.h-128 {
-    height: 32rem;
-}
-
-.min-h-content {
-    min-height: calc(100vh - 7.5rem);
+    .min-h-content {
+        min-height: calc(100vh - 7.5rem);
+    }
 }
 
 /* Components */
 .btn {
-    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow hover:ring hover:ring-blue-200 focus:outline-none
+    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow shadow-lg hover:ring hover:ring-blue-200 focus:outline-none
         focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
@@ -53,9 +50,13 @@ body {
     @apply bg-secondary;
 }
 
+.clickable {
+    @apply transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+}
+
 .link {
-    @apply inline-flex items-center gap-1 text-primary-accent font-bold rounded-lg cursor-pointer transition-shadow hover:ring hover:ring-blue-200
-        focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-flex items-center gap-1 text-primary-dark font-bold rounded-lg cursor-pointer transition-shadow hover:ring
+        hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
 }
 
 .link > .link-text {
@@ -67,4 +68,12 @@ body {
     transition-property: height, opacity, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;
+}
+
+.card {
+    @apply rounded-lg bg-primary-light shadow-lg;
+}
+
+.card-explore {
+    @apply grid grid-cols-explore h-full;
 }

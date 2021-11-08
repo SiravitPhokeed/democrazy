@@ -1,11 +1,12 @@
 {% extends "layout.html" %}
+{% set page = "explore" %}
 
 {% block title %}
     Explore
 {% endblock %}
 
 {% block main %}
-    <header class="flex justify-center">
+    <header class="flex flex-row justify-center">
         <h1 class="sr-only">Explore</h1>
         <p class="w-[50ch] max-w-screen font-bold text-2xl xl:text-3xl text-center">
             Over many decades, people have tried to solve the issues of <a class="link" href="/explore/first-past-the-post">
@@ -13,4 +14,106 @@
             here are some of the attempts!
         </p>
     </header>
+    <main class="flex flex-col gap-6 my-9">
+        <section class="flex flex-col gap-3 lg:px-32">
+            <h2 class="font-bold text-2xl xl:text-3xl">Plurality system</h2>
+            <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <a href="/explore/first-past-the-post" class="card clickable">
+                    <li class="card-explore">
+                        <div class="flex flex-row justify-center items-end px-3">
+                            <img src="{{ url_for('static', filename='pictures/explore/first-past-the-post.png') }}">
+                        </div>
+                        <div class="py-3 break-words">
+                            <h3 class="font-bold text-xl">
+                                First-past-the-post
+                            </h3>
+                            <p>
+                                The highest polling candidate is elected
+                            </p>
+                        </div>
+                    </li>
+                </a>
+                <a href="/explore/first-past-the-post" class="card clickable">
+                    <li class="card-explore">
+                        <div class="grid place-items-center p-3">
+                            <img src="{{ url_for('static', filename='pictures/explore/limited-voting.png') }}">
+                        </div>
+                        <div class="py-3 break-words">
+                            <h3 class="font-bold text-xl">
+                                Limited Voting
+                            </h3>
+                            <p>
+                                Vote for more than one candidate, but less than the positions available
+                            </p>
+                        </div>
+                    </li>
+                </a>
+                <a href="/explore/block-voting" class="card clickable">
+                    <li class="card-explore">
+                        <div class="grid place-items-center p-3">
+                            <img src="{{ url_for('static', filename='pictures/explore/block-voting.png') }}">
+                        </div>
+                        <div class="py-3 break-words">
+                            <h3 class="font-bold text-xl">
+                                Block Voting
+                            </h3>
+                            <p>
+                                Vote for as many positions are available
+                            </p>
+                        </div>
+                    </li>
+                </a>
+                <a href="/explore/party-block-voting" class="card clickable">
+                    <li class="card-explore">
+                        <div class="grid place-items-center p-3">
+                            <img src="{{ url_for('static', filename='pictures/explore/party-block-voting.png') }}" class="h-24">
+                        </div>
+                        <div class="py-3 break-words">
+                            <h3 class="font-bold text-xl">
+                                Party Block Voting
+                            </h3>
+                            <p>
+                                Vote for as many positions are available; but voters vote for parties, not candidates
+                            </p>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </section>
+        <section class="flex flex-col gap-3 lg:px-32">
+            <h2 class="font-bold text-2xl xl:text-3xl">Ranked/Preferential system</h2>
+            <ul class="grid sm:grid-cols-2 md:grid-cols-3 gap-3">
+                <a href="/explore/alternative-voting" class="card clickable">
+                    <li class="card-explore">
+                        <div class="grid place-items-center p-3">
+                            <img src="{{ url_for('static', filename='pictures/explore/alternative-voting.png') }}">
+                        </div>
+                        <div class="py-3 break-words">
+                            <h3 class="font-bold text-xl">
+                                Alternative Voting
+                            </h3>
+                            <p>
+                                Voters rank candidates; runoffs happen in calculation
+                            </p>
+                        </div>
+                    </li>
+                </a>
+                <a href="/explore/tideman-av" class="card clickable">
+                    <li class="card-explore">
+                        <div class="grid place-items-center p-3">
+                            <img src="{{ url_for('static', filename='pictures/explore/tideman-av.png') }}">
+                        </div>
+                        <div class="py-3 break-words">
+                            <h3 class="font-bold text-xl">
+                                Tideman AV
+                            </h3>
+                            <p>
+                                You know it, you love it, it’s Tideman from PSet 3 of the CS50 course
+                            </p>
+                        </div>
+                    </li>
+                </a>
+            </ul>
+        </section>
+    </main>
 {% endblock %}

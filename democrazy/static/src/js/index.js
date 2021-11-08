@@ -293,8 +293,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
                 // Change buttons
                 let btnsContainer = document.querySelector("#btns-container");
-                btnsContainer.innerHTML = `<button class="btn btn-secondary text-xl xl:text-2xl" id="reset-btn" autofocus>Play again\
-                    </button><a class="btn btn-primary text-xl xl:text-2xl" href="/explore">Explore</a>`;
+                btnsContainer.innerHTML = `
+                    <button class="btn btn-secondary text-xl xl:text-2xl" id="reset-btn" autofocus>
+                        Play again
+                    </button>
+                    <a class="btn btn-primary text-xl xl:text-2xl" href="/explore">
+                        Explore
+                    </a>
+                `;
                 btnsContainer.style.justifyContent = "flex-start";
 
                 // Set event listeners for the new buttons

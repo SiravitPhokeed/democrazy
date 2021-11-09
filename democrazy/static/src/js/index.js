@@ -312,7 +312,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>
                         <a class="link" href="/explore">
                             <span class="link-text">Explore other voting systems</span>
-                            <span class="material-icons text-2xl xl:text-3xl">launch</span>
+                            <span class="material-icons text-2xl xl:text-3xl" translate="no">launch</span>
                         </a>
                     </p>
                 `;

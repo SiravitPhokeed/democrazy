@@ -152,7 +152,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 barB1.innerHTML = "";
                 setTimeout(() => {
                     barB1.classList.add("from-tertiary");
-                    barB1.classList.remove("from-tertiary-light");
+                    barB1.classList.remove("from-tertiary-translucent");
                 }, 500);
 
                 // Give bars text
@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 barBBorder.classList.add("ring-blue-500");
                 barB1.style.height = null;
                 barB1.style.opacity = null;
-                barB1.classList.add("from-tertiary-light");
+                barB1.classList.add("from-tertiary-translucent");
                 barB1.classList.remove("from-tertiary");
                 setTimeout(() => {
                     barB1.innerHTML = "B1";
@@ -236,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }, 500);
                 setTimeout(() => {
                     barB1.classList.add("from-tertiary");
-                    barB1.classList.remove("from-tertiary-light");
+                    barB1.classList.remove("from-tertiary-translucent");
                     barB1.style.opacity = null;
                     barBBorder.classList.remove("ring");
                     barBBorder.classList.remove("ring-offset-2");

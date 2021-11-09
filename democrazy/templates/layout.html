@@ -11,18 +11,18 @@
     {% block script %}{% endblock %}
 </head>
 
-<body>
+<body class="bg-white text-black dark:bg-gray-800 dark:text-white">
     <nav class="fixed flex flex-row flex-wrap justify-between items-center gap-6 w-screen px-12 py-2 text-xl rounded-b-xl bg-white
-        bg-opacity-50 backdrop-filter backdrop-blur shadow-lg z-40">
+        dark:bg-gray-600 bg-opacity-50 backdrop-filter backdrop-blur shadow-lg z-40">
         <img src="{{ url_for('static', filename='pictures/logo.svg') }}" alt="Democrazy logo" class="w-40">
         <ul class="flex flex-row flex-wrap gap-1 list-none px-9">
-            <li class="{{ 'bg-gray-200' if page == 'home' }} px-4 py-2 rounded-lg">
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'home' }} px-4 py-2 rounded-lg">
                 <a href="/" class="hover:opacity-75 transition-opacity">Home</a>
             </li>
-            <li class="{{ 'bg-gray-200' if page == 'explore' }} px-4 py-2 rounded-lg">
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'explore' }} px-4 py-2 rounded-lg">
                 <a href="/explore" class="hover:opacity-75 transition-opacity">Explore</a>
             </li>
-            <li class="{{ 'bg-gray-200' if page == 'polls' }} px-4 py-2 rounded-lg">
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'polls' }} px-4 py-2 rounded-lg">
                 <a href="/polls" class="hover:opacity-75 transition-opacity">My Polls</a>
             </li>
         </ul>

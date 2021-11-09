@@ -31,8 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     function changeTo(slideNumber) {
-        console.log(slideNumber)
-
         text.style.opacity = "0";
         text.style.transform = "translateX(2rem)";
 

@@ -9,11 +9,6 @@
     --primary-accent: #33658A;
 }
 
-/* Reset */
-body {
-    font-family: "Inter", sans-serif;
-}
-
 /* Utilities */
 @layer utilities {
     .transition-slow {
@@ -75,5 +70,5 @@ body {
 }
 
 .card-explore {
-    @apply grid grid-cols-explore h-full;
+    @apply grid grid-cols-explore h-full rounded-lg;
 }

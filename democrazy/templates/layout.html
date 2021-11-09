@@ -14,9 +14,9 @@
     {% block script %}{% endblock %}
 </head>
 
-<body class="bg-white text-black dark:bg-gray-800 dark:text-white">
+<body class="bg-white text-black dark:bg-gray-800 dark:text-white transition-colors">
     <nav class="fixed flex flex-row flex-wrap justify-between items-center gap-6 w-screen px-12 py-2 text-xl rounded-b-xl bg-white
-        dark:bg-gray-600 bg-opacity-50 backdrop-filter backdrop-blur shadow-lg z-40">
+        bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-50 backdrop-filter backdrop-blur shadow-lg z-40">
         <img src="{{ url_for('static', filename='pictures/logo.svg') }}" alt="Democrazy logo" class="w-40">
         <ul class="flex flex-row flex-wrap gap-1 list-none px-9">
             <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'home' }} px-4 py-2 rounded-lg">

@@ -6,7 +6,7 @@ module.exports = {
       './democrazy/static/src/**/*.js'
     ]
   },
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: 'media',
   theme: {
     extend: {
       animation: {
@@ -24,7 +24,16 @@ module.exports = {
         },
         'tertiary': {
           DEFAULT: '#758E4F',
-          light: '#E3E8DB'
+          light: '#E3E8DB',
+          translucent: '#758E4F32'
+        },
+        'card': {
+          dark: '#000000',
+          DEFAULT: '#DDFFF7'
+        },
+        'link': {
+          DEFAULT: '#33658A',
+          light: '#8194b5'
         }
       },
       gridTemplateColumns: {
@@ -45,5 +54,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-    plugins: [],
+  plugins: [],
 }

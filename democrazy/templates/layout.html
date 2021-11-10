@@ -17,7 +17,10 @@
 <body class="bg-white text-black dark:bg-gray-800 dark:text-white transition-colors">
     <nav class="fixed flex flex-row flex-wrap justify-between items-center gap-6 w-screen px-12 py-2 text-xl rounded-b-xl bg-white
         bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-50 backdrop-filter backdrop-blur shadow-lg z-40">
-        <img src="{{ url_for('static', filename='pictures/logo.svg') }}" alt="Democrazy logo" class="w-40">
+        <picture class="w-40">
+            <source src="{{ url_for('static', filename='pictures/logo-dark.svg') }}" media="(prefers-color-scheme: dark)">
+            <img src="{{ url_for('static', filename='pictures/logo.svg') }}" alt="Democrazy logo">
+        </picture>
         <ul class="flex flex-row flex-wrap gap-1 list-none px-9">
             <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'home' }} px-4 py-2 rounded-lg">
                 <a href="/" class="hover:opacity-75 transition-opacity">Home</a>
@@ -30,9 +33,25 @@
             </li>
         </ul>
     </nav>
-    <div>
-    <div class="transform translate-y-12 p-9">
-        {% block main %}{% endblock %}
+    <div class="flex flex-col gap-6 transform translate-y-12 p-9">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flex flex-col gap-3">
+                    {% for message in messages %}
+                        <li class="flex flex-row justify-between items-start relative px-6 py-3 rounded-lg bg-secondary-light dark:bg-secondary-dark shadow-lg">
+                            {{ message }}
+                            <button class="material-icons text-lg my-1 transition-shadow hover:ring hover:ring-white focus:outline-none
+                                focus:ring focus:ring-white">
+                                close
+                            </button>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <div>
+            {% block main %}{% endblock %}
+        </div>
     </div>
 </body>
 

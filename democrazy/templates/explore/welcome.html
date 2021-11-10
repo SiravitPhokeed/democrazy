@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ system.name }}
+{% endblock %}
+
+{% block main %}
+    <div class="flex flex-col gap-6 p-12">
+        <div>
+            <a href="/explore" class="link text-lg pr-1">
+                <span class="material-icons">arrow_back</span>
+                <span>Back</span>
+            </a>
+            <header class="flex flex-row flex-wrap gap-1 items-center font-bold text-4xl">
+                <h1>{{ system.name }}</h1>
+                <span class="material-icons text-primary-dark">chevron_right</span>
+                <h2>Welcome</h2>
+            </header>
+        </div>
+        <section>
+            <p class="text-xl max-w-[70ch]">{{ system.desc }}</p>
+        </section>
+        <section class="flex flex-col sm:grid sm:grid-cols-2 gap-3 max-w-xl">
+            <div class="card px-3 py-2">
+                <h3 class="font-bold text-2xl">What it does well</h3>
+            </div>
+            <div class="flex flex-col gap-3">
+                <div class="card">
+                    <h3 class="font-bold text-2xl px-3 py-2">How it works</h3>
+                    <div class="grid grid-cols-2">
+                        <img src="{{ url_for('static', filename='pictures/explore/animation-bg.png') }}" alt="" class="h-24">
+                        <div class="flex justify-end items-end">
+                            <p class="sr-only">
+                                Enjoy an animated walkthrough
+                            </p>
+                            <a href="/explore/{{ system.code }}/play" class="btn btn-secondary text-xl m-2">
+                                Play
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3 class="font-bold text-2xl px-3 py-2">Create a poll</h3>
+                    <div class="grid grid-cols-2">
+                        <div class="flex justify-start items-end">
+                            <img src="{{ url_for('static', filename='pictures/explore/create-bg.png') }}" alt="" class="h-24">
+                        </div>
+                        <div class="flex justify-end items-end">
+                            <p class="sr-only">
+                                Use this system with your friends
+                            </p>
+                            <a href="/polls/create?type={{ system.code }}" class="btn btn-secondary text-xl m-2">
+                                Create
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+{% endblock %}

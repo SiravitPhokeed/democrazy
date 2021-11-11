@@ -25,14 +25,14 @@
         </svg>
 
         <ul class="flex flex-row flex-wrap gap-1 list-none px-9">
-            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'home' }} px-4 py-2 rounded-lg">
-                <a href="/" class="hover:opacity-75 transition-opacity">Home</a>
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner hover:ring-gray-400' if page == 'home' }} rounded-lg clickable">
+                <a href="/" class="block px-4 py-2">Home</a>
             </li>
-            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'explore' }} px-4 py-2 rounded-lg">
-                <a href="/explore" class="hover:opacity-75 transition-opacity">Explore</a>
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner hover:ring-gray-400' if page == 'explore' }} rounded-lg clickable">
+                <a href="/explore" class="block px-4 py-2">Explore</a>
             </li>
-            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner' if page == 'polls' }} px-4 py-2 rounded-lg">
-                <a href="/polls" class="hover:opacity-75 transition-opacity">My Polls</a>
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner hover:ring-gray-400' if page == 'polls' }} rounded-lg clickable">
+                <a href="/polls" class="block px-4 py-2">My Polls</a>
             </li>
         </ul>
     </nav>

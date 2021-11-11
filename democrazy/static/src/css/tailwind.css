@@ -34,6 +34,10 @@
         @apply transition-shadow hover:ring hover:ring-blue-200 focus:outline-none dark:hover:ring-gray-500 focus:ring
             focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-blue-300 dark:focus:ring-offset-gray-800;
     }
+
+    .clickable-focused {
+        @apply ring ring-offset-2 ring-blue-500 dark:ring-blue-300 dark:ring-offset-gray-800;
+    }
 }
 
 /* Components */

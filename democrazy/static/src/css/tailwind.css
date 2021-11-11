@@ -29,12 +29,16 @@
     .min-h-content {
         min-height: calc(100vh - 7.5rem);
     }
+
+    .clickable {
+        @apply transition-shadow hover:ring hover:ring-blue-200 focus:outline-none dark:hover:ring-gray-500 focus:ring
+            focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-blue-300 dark:focus:ring-offset-gray-800;
+    }
 }
 
 /* Components */
 .btn {
-    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow shadow-lg hover:ring hover:ring-blue-200 focus:outline-none
-        focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow shadow-lg clickable;
 }
 
 .btn-primary {
@@ -45,13 +49,8 @@
     @apply bg-secondary;
 }
 
-.clickable {
-    @apply transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
-}
-
 .link {
-    @apply inline-flex items-center gap-1 text-link dark:text-link-light font-bold rounded-lg cursor-pointer transition-shadow hover:ring
-        hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-flex items-center gap-1 text-link dark:text-link-light font-bold rounded-lg cursor-pointer clickable;
 }
 
 .link > .link-text {

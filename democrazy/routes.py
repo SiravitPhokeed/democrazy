@@ -3,18 +3,34 @@ from werkzeug.utils import redirect
 
 bp = Blueprint("landing", __name__)
 
+DOES_WELL_KEY = {
+    "proportionality": "Proportionality",
+    "voterChoice": "Voter Choice",
+    "localRep": "Local Representation"
+}
+
 SYSTEMS = {
     "first-past-the-post": {
         "name": "First-past-the-post",
         "code": "first-past-the-post",
         "desc": "There is a high possibilty that your country is using this one. If so, then your country probably has the big 2 \
             parties that everybody hates but votes for anyway, and those small parties that nobody cares about. Not a great system, \
-            is it?"
+            is it?",
+        "doesWell": {
+            "proportionality": 0,
+            "voterChoice": 0,
+            "localRep": 1
+        }
     },
     "limited-voting": {
         "name": "Limited Voting",
         "code": "limited-voting",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, a. Totam, aliquid nam? Eos, nisi."
+        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, a. Totam, aliquid nam? Eos, nisi.",
+        "doesWell": {
+            "proportionality": 1,
+            "voterChoice": 2,
+            "localRep": 1
+        }
     },
 }
 
@@ -32,7 +48,7 @@ def explore_system(name):
         flash("We have not implemented that system yet!")
         return redirect("/explore")
     
-    return render_template("explore/welcome.html", system=SYSTEMS[name])
+    return render_template("explore/welcome.html", system=SYSTEMS[name], does_well_key=DOES_WELL_KEY)
 
 @bp.route("/polls")
 def polls():

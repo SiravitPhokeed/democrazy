@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block main %}
-    <div class="flex flex-col gap-6 p-12">
+    <div class="flex flex-col gap-6 sm:p-12">
         <div>
             <a href="/explore" class="link text-lg pr-1">
                 <span class="material-icons">arrow_back</span>
@@ -13,7 +13,7 @@
             </a>
             <header class="flex flex-row flex-wrap gap-1 items-center font-bold text-4xl">
                 <h1>{{ system.name }}</h1>
-                <span class="material-icons text-primary-dark">chevron_right</span>
+                <span class="material-icons text-primary-dark dark:text-primary">chevron_right</span>
                 <h2>Welcome</h2>
             </header>
         </div>
@@ -21,8 +21,22 @@
             <p class="text-xl max-w-[70ch]">{{ system.desc }}</p>
         </section>
         <section class="flex flex-col sm:grid sm:grid-cols-2 gap-3 max-w-xl">
-            <div class="card px-3 py-2">
+            <div class="card flex flex-col gap-1 px-3 py-2">
                 <h3 class="font-bold text-2xl">What it does well</h3>
+                <ul class="flex flex-col gap-1 p-3 text-xl">
+                    {% for item in does_well_key %}
+                        <li class="flex flex-row gap-2 items-center">
+                            {% if system.doesWell[item] == 0 %}
+                                <span class="material-icons text-red-700 dark:text-red-400">thumb_down</span>
+                            {% elif system.doesWell[item] == 1 %}
+                                <span class="material-icons text-gray-600 dark:text-white">horizontal_rule</span>
+                            {% elif system.doesWell[item] == 2 %}
+                                <span class="material-icons text-green-400">thumb_up</span>
+                            {% endif %}
+                            <span>{{does_well_key[item]}}</span>
+                        </li>
+                    {% endfor %}
+                </ul>
             </div>
             <div class="flex flex-col gap-3">
                 <div class="card">

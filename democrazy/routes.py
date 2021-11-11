@@ -20,7 +20,8 @@ SYSTEMS = {
             "proportionality": 0,
             "voterChoice": 0,
             "localRep": 1
-        }
+        },
+        "playable": True
     },
     "limited-voting": {
         "name": "Limited Voting",
@@ -31,7 +32,8 @@ SYSTEMS = {
             "proportionality": 1,
             "voterChoice": 2,
             "localRep": 1
-        }
+        },
+        "playable": False
     },
 }
 
@@ -44,12 +46,20 @@ def explore():
     return render_template("explore.html")
 
 @bp.route("/explore/<name>")
-def explore_system(name):
+def explore_welcome(name):
     if name not in SYSTEMS:
         flash("We have not implemented that system yet!")
         return redirect("/explore")
     
     return render_template("explore/welcome.html", system=SYSTEMS[name], does_well_key=DOES_WELL_KEY)
+
+@bp.route("/explore/<name>/play")
+def explore_play(name):
+    if name not in SYSTEMS or SYSTEMS[name]["playable"] is False:
+        flash("We have not implemented that system yet!")
+        return redirect(f"/explore/{name}")
+    
+    return render_template(f"explore/{name}.html")
 
 @bp.route("/polls")
 def polls():

@@ -25,13 +25,13 @@
         </svg>
 
         <ul class="flex flex-row flex-wrap gap-1 list-none px-9">
-            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner hover:ring-gray-400' if page == 'home' }} rounded-lg clickable">
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner dark:hover:ring-gray-400' if page == 'home' }} rounded-lg clickable">
                 <a href="/" class="block px-4 py-2">Home</a>
             </li>
-            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner hover:ring-gray-400' if page == 'explore' }} rounded-lg clickable">
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner dark:hover:ring-gray-400' if page == 'explore' }} rounded-lg clickable">
                 <a href="/explore" class="block px-4 py-2">Explore</a>
             </li>
-            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner hover:ring-gray-400' if page == 'polls' }} rounded-lg clickable">
+            <li class="{{ 'bg-gray-200 dark:bg-gray-500 shadow-inner dark:hover:ring-gray-400' if page == 'polls' }} rounded-lg clickable">
                 <a href="/polls" class="block px-4 py-2">My Polls</a>
             </li>
         </ul>
@@ -41,7 +41,8 @@
             {% if messages %}
                 <ul class="flex flex-col gap-3">
                     {% for message in messages %}
-                        <li class="flex flex-row justify-between items-start relative px-6 py-3 rounded-lg bg-secondary-light dark:bg-secondary-dark shadow-lg">
+                        <li class="flex flex-row justify-between items-start relative px-6 py-3 rounded-lg bg-secondary-light
+                            dark:bg-secondary-dark shadow-lg">
                             {{ message }}
                             <button class="material-icons text-lg my-1 transition-shadow hover:ring hover:ring-white focus:outline-none
                                 focus:ring focus:ring-white">

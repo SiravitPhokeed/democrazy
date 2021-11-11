@@ -25,7 +25,8 @@ SYSTEMS = {
     "limited-voting": {
         "name": "Limited Voting",
         "code": "limited-voting",
-        "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, a. Totam, aliquid nam? Eos, nisi.",
+        "desc": "In this system, voters have fewer votes than there are positions available, and those positions are given to the most \
+            highly voted candidates. This usually helps smaller parties gain representation.",
         "doesWell": {
             "proportionality": 1,
             "voterChoice": 2,

@@ -13,7 +13,7 @@ SYSTEMS = {
     "first-past-the-post": {
         "name": "First-past-the-post",
         "code": "first-past-the-post",
-        "desc": "There is a high possibilty that your country is using this one. If so, then your country probably has the big 2 \
+        "desc": "There is a high possibility that your country is using this one. If so, then your country probably has the big 2 \
             parties that everybody hates but votes for anyway, and those small parties that nobody cares about. Not a great system, \
             is it?",
         "doesWell": {

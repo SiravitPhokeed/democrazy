@@ -31,7 +31,7 @@ SYSTEMS = {
         "doesWell": {
             "proportionality": 1,
             "voterChoice": 2,
-            "localRep": 1
+            "localRep": 2
         },
         "playable": False
     },

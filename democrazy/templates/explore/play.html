@@ -4,6 +4,12 @@
     {% block play_title %}{% endblock %}
 {% endblock %}
 
+{% block script %}
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    {% block play_script %}{% endblock %}
+{% endblock %}
+
 {% block main %}
     <div class="min-h-content">
         <div class="sm:p-12">

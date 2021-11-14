@@ -11,6 +11,15 @@
 
 /* Utilities */
 @layer utilities {
+    .grid-ta-same {
+        display: grid;
+        grid-template-areas: "same";
+    }
+
+    .grid-a-same {
+        grid-area: same;
+    }
+
     .transition-slow {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 500ms;
@@ -63,6 +72,13 @@
 
 .bar {
     @apply block w-56 text-2xl bg-gradient-to-b rounded-t-3xl;
+    transition-property: height, opacity, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+
+.bar-e {
+    @apply block w-48 text-2xl text-center bg-gradient-to-b rounded-t-3xl p-4;
     transition-property: height, opacity, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;

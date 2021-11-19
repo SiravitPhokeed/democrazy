@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{ system.name }}
+{% endblock %}
+
+{% block main %}
+    <div class="flex flex-col gap-6 sm:p-12">
+        <div>
+            <a href="/explore/first-past-the-post/play" class="link text-lg pr-1">
+                <span class="material-icons">arrow_back</span>
+                <span>Back</span>
+            </a>
+            <header class="flex flex-row flex-wrap gap-1 items-center font-bold text-4xl">
+                <h1><a href="/explore/first-past-the-post" class="clickable rounded-lg">{{ system.name }}</a></h1>
+                <span class="material-icons text-primary-dark dark:text-primary">chevron_right</span>
+                <h2>Share</h2>
+            </header>
+        </div>
+        <section>
+            <p class="text-xl max-w-[70ch]">Alright! How would you like to share {{ system.name }}?</p>
+        </section>
+        <section class="flex flex-col gap-3">
+            <section class="flex flex-col sm:flex-row gap-3">
+                <div class="card w-full sm:w-64">
+                    <h3 class="font-bold text-2xl px-3 py-2">How it works</h3>
+                    <div class="grid grid-cols-2">
+                        <img src="{{ url_for('static', filename='pictures/explore/animation-bg.png') }}" alt="" class="h-24">
+                        <div class="flex justify-end items-end">
+                            <a href="#" class="btn btn-secondary text-xl m-2">
+                                Share
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xl sm:max-w-[24ch] lg:max-w-[42ch]">
+                    <p>
+                        <strong>Let your friends know about how this system works.</strong>
+                    </p>
+                    <p>
+                        Maybe even convince them to write to your representatives about it if you’re that serious!
+                    </p>
+                </div>
+            </section>
+            <hr class="visible sm:invisible">
+            <section class="flex flex-col sm:flex-row gap-3">
+                <div class="card w-full sm:w-64">
+                    <h3 class="font-bold text-2xl px-3 py-2">Create a poll</h3>
+                    <div class="grid grid-cols-2">
+                        <div class="flex justify-start items-end">
+                            <img src="{{ url_for('static', filename='pictures/explore/create-bg.png') }}" alt="" class="h-24">
+                        </div>
+                        <div class="flex justify-end items-end">
+                            <a href="/polls/create?type={{ system.code }}" class="btn btn-secondary text-xl m-2">
+                                Create
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-xl sm:max-w-[24ch] lg:max-w-[42ch]">
+                    <p>
+                        <strong>Create and share a poll made with this system</strong>, and watch the animation of our website calculating
+                        the results!
+                    </p>
+                </div>
+            </section>
+        </section>
+    </div>
+{% endblock %}

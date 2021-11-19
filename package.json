@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "eslint": "^8.2.0",
-    "glob-parent": "^6.0.2"
+    "glob-parent": "^6.0.2",
+    "mathjax": "^3.2.0"
   }
 }

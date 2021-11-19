@@ -97,6 +97,10 @@ document.addEventListener("DOMContentLoaded", () => {
         } else if (slideNumber === 2) {
             floatRightExit(text);
             setTimeout(() => {
+                resetBtns(btnsContainer);
+                document.querySelector("#back-btn").addEventListener("click", back);
+                document.querySelector("#next-btn").addEventListener("click", next);
+
                 floatLeftEntrance(text);
                 text.innerHTML = `
                     <p>
@@ -126,6 +130,39 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p>\\(\\therefore \\text{winner } = \\max(f(n)); n \\in C \\)</p>
                 `;
                 MathJax.typeset();
+            }, 500);
+
+        } else if (slideNumber === 3) {
+            floatDownExit(card);
+            floatRightExit(text);
+            setTimeout(() => {
+                setBtnsToEnd(btnsContainer, "first-past-the-post");
+                document.querySelector("#back-btn").addEventListener("click", back);
+
+                floatLeftEntrance(text);
+                text.innerHTML = `
+                    <p>
+                        Alright, alright. If you really don’t get this then just lay your eyes on the diagram on the left.
+                    </p>
+                    <p>
+                        The bar labelled <strong>B is bigger than the other bars</strong>. That means more voters like party B than any
+                        other party. Thus, <strong>party B wins</strong>.
+                    </p>
+                `;
+
+                barA.innerHTML = `
+                    <p>A</p>
+                    <p class="text-xl">(smaller)</p>
+                `;
+                barB.innerHTML = `
+                    <p>B</p>
+                    <p class="text-xl">(bigger)</p>
+                `;
+                barC.innerHTML = `
+                    <p>C</p>
+                    <p class="text-xl">(smaller)</p>
+                `;
+
             }, 500);
         }
     }

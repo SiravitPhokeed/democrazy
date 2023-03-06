@@ -11,6 +11,15 @@
 
 /* Utilities */
 @layer utilities {
+    .grid-ta-same {
+        display: grid;
+        grid-template-areas: "same";
+    }
+
+    .grid-a-same {
+        grid-area: same;
+    }
+
     .transition-slow {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 500ms;
@@ -29,12 +38,20 @@
     .min-h-content {
         min-height: calc(100vh - 7.5rem);
     }
+
+    .clickable {
+        @apply transition-shadow hover:ring hover:ring-blue-200 focus:outline-none dark:hover:ring-gray-500 focus:ring
+            focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-blue-300 dark:focus:ring-offset-gray-800;
+    }
+
+    .clickable-focused {
+        @apply ring ring-offset-2 ring-blue-500 dark:ring-blue-300 dark:ring-offset-gray-800;
+    }
 }
 
 /* Components */
 .btn {
-    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow shadow-lg hover:ring hover:ring-blue-200 focus:outline-none
-        focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-block rounded-lg px-4 py-2 text-black transition-shadow shadow-lg clickable;
 }
 
 .btn-primary {
@@ -45,13 +62,8 @@
     @apply bg-secondary;
 }
 
-.clickable {
-    @apply transition-shadow hover:ring hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
-}
-
 .link {
-    @apply inline-flex items-center gap-1 text-link dark:text-link-light font-bold rounded-lg cursor-pointer transition-shadow hover:ring
-        hover:ring-blue-200 focus:outline-none focus:ring focus:ring-offset-2 focus:ring-blue-500;
+    @apply inline-flex items-center gap-1 text-link dark:text-link-light font-bold rounded-lg cursor-pointer clickable;
 }
 
 .link > .link-text {
@@ -60,6 +72,13 @@
 
 .bar {
     @apply block w-56 text-2xl bg-gradient-to-b rounded-t-3xl;
+    transition-property: height, opacity, box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 500ms;
+}
+
+.bar-e {
+    @apply block w-48 text-2xl text-center bg-gradient-to-b rounded-t-3xl p-4;
     transition-property: height, opacity, box-shadow;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 500ms;

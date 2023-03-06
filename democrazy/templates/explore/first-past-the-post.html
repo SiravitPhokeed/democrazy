@@ -1,0 +1,44 @@
+{% extends "explore/play.html" %}
+
+{% block play_title %}
+    First-past-the-post
+{% endblock %}
+
+{% block system %}
+    First-past-the-post
+{% endblock %}
+
+{% block play_script %}
+    <script src="{{ url_for('static', filename='src/js/explore/first-past-the-post.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="grid grid-cols-2">
+        <div class="flex flex-row justify-center items-end p-9" style="min-height: calc(100vh - 18rem);">
+            <div class="flex flex-row items-end gap-4 absolute bottom-0" id="content">
+                <div class="bar-e h-[22.5rem] from-primary" id="bar-a">A</div>
+                <div class="bar-e h-[30rem] from-secondary" id="bar-b">
+                    <p>B</p>
+                    <p class="text-xl">(winner)</p>
+                </div>
+                <div class="bar-e h-[10rem] from-tertiary" id="bar-c">C</div>
+            </div>
+            <div class="card px-4 py-3 text-lg z-10 transition-slow-float" id="card"
+                style="opacity: 0; transform: translateY(1rem);"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+            <div class="flex flex-row justify-end gap-[0.4rem]" id="btns-container">
+                <button class="btn btn-primary text-xl xl:text-2xl" id="back-btn">Back</button>
+                <button class="btn btn-secondary text-xl xl:text-2xl" id="next-btn">Next</button>
+            </div>
+            <main class="flex flex-col gap-2 text-xl xl:text-2xl transition-slow-float" id="text">
+                <p>
+                    <strong>The one with the most votes wins.</strong>
+                </p>
+                <p>
+                    Still don’t get it? Follow along!
+                </p>
+            </main>
+        </div>
+    </div>
+{% endblock %}
